@@ -1,26 +1,32 @@
-# Hava Durumu Ogrenme
+# Hava Durumu Uygulaması
 
-# Hava Durumu API Kullanımı
+Bu uygulama, kullanıcının hava durumu bilgisini almasına olanak tanır. Kullanıcı, şehir adını girerek hava durumu bilgisini alabilir.
 
-Bu Python betiği, OpenWeatherMap API'sini kullanarak kullanıcıdan bir şehir adı alır ve o şehrin güncel hava durumu bilgilerini görüntüler.
+## Kullanılan Kütüphaneler
 
-## Gereksinimler
+- `tkinter`: Grafik arayüz oluşturmak için kullanılan standart bir Python kütüphanesidir.
+- `PIL`: Python Imaging Library, resim işleme işlevleri sağlar.
+- `requests`: HTTP istekleri göndermek için kullanılan bir Python kütüphanesidir.
 
-- Python 3.x
-- requests kütüphanesi (kurmak için: `pip install requests`)
-- Bir OpenWeatherMap API anahtarı (ücretsiz olarak [buradan](https://openweathermap.org) alınabilir)
+## API Bilgileri
+
+Hava durumu bilgileri, OpenWeatherMap API'si kullanılarak alınmaktadır. API anahtarınızı `api_key` değişkenine atamanız gerekmektedir.
+
+## Fonksiyonlar
+
+- `getWeather(city)`: Belirli bir şehir için hava durumu bilgisini getiren fonksiyon.
+- `main()`: Kullanıcının girdiği şehir adına göre hava durumu bilgisini alarak arayüzde gösteren fonksiyon.
 
 ## Kullanım
 
-1. Öncelikle, OpenWeatherMap sitesine gidin ve bir API anahtarı alın.
-2. Anahtarı `config.py` dosyasına ekleyin:
+1. Uygulamayı başlatın.
+2. Arama kutusuna hava durumu bilgisini almak istediğiniz şehrin adını girin.
+3. "Arama" butonuna tıklayarak hava durumu bilgisini görüntüleyin.
 
-    ```python
-    API_KEY = "YOUR_API_KEY"
-    ```
+## Notlar
 
-3. Ardından, `hava_durumu.py` dosyasını çalıştırarak betiği başlatın. Betik sizi bir şehir adı girmeniz için bir giriş bekleyecektir.
-4. Şehir adını girdikten sonra, betik API'ye bağlanacak ve o şehre ait güncel hava durumu bilgilerini görüntüleyecektir.
+- `cityEntry` alanına şehir adını girerken Türkçe karakterler kullanabilirsiniz.
+- Hava durumu bilgisi başarıyla alındığında, ilgili şehir adı, sıcaklık, durum ve ikon arayüzde görüntülenecektir.
 
 
 
